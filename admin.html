@@ -22,7 +22,7 @@
                 <li><a href="#products"><i class="fas fa-box"></i> Products</a></li>
                 <li><a href="#orders"><i class="fas fa-shopping-cart"></i> Orders</a></li>
                 <li><a href="#users"><i class="fas fa-users"></i> Users</a></li>
-				<li><a href="admin-shopee.html" class="active"><i class="fas fa-store"></i> Shopee Integration</a></li>
+				<li><a href="#shoopee" class="active"><i class="fas fa-store"></i> Shopee Integration</a></li>
                 <li><a href="#freight"><i class="fas fa-shipping-fast"></i> Freight Settings</a></li>
                 <li><a href="#payments"><i class="fas fa-credit-card"></i> Payments</a></li>
                 <li><a href="#logs"><i class="fas fa-clipboard-list"></i> System Logs</a></li>
@@ -68,7 +68,7 @@
             </section>
 			
            <!-- Connection Panel -->
-            <section class="connection-panel admin-section">
+            <section id="shoopee" class="connection-panel admin-section">
                 <h2>Connect Your Shopee Account</h2>
                 
                 <div class="connection-status" id="connectionStatus">
@@ -116,10 +116,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            <!--</section>-->
             
             <!-- Import Products Panel -->
-            <section class="import-panel admin-section">
+            <!--<section class="import-panel admin-section">-->
                 <h2>Import Shopee Products</h2>
                 
                 <div class="import-controls">
@@ -190,10 +190,10 @@
                         <span id="progressPercent">0%</span>
                     </div>
                 </div>
-            </section>
+           <!-- </section>-->
             
             <!-- Product Preview Panel -->
-            <section class="preview-panel admin-section" id="previewPanel" style="display:none;">
+           <!-- <section class="preview-panel admin-section" id="previewPanel" style="display:none;">-->
                 <div class="preview-header">
                     <h2>Products to Import</h2>
                     <div class="preview-actions">
@@ -218,10 +218,10 @@
                         Cancel
                     </button>
                 </div>
-            </section>
+            <!--</section>-->
             
             <!-- Imported Products List -->
-            <section class="imported-products admin-section">
+            <!--<section class="imported-products admin-section">-->
                 <div class="section-header">
                     <h2>Imported Shopee Products</h2>
                     <div class="header-actions">
@@ -272,10 +272,11 @@
                     <span class="page-info">Page 1 of 1</span>
                     <button class="pagination-btn next" disabled>Next</button>
                 </div>
-            </section>
+           <!-- </section>-->
             
             <!-- Sync Logs -->
-            <section class="sync-logs admin-section">
+           <!-- <section class="sync-logs admin-section">-->
+				
                 <h2>Sync History</h2>
                 <div class="admin-table-container">
                     <table class="admin-table" id="syncLogsTable">
@@ -293,6 +294,9 @@
                         </tbody>
                     </table>
                 </div>
+			
+
+				
             </section>
 
 			      
@@ -490,4 +494,5 @@
     <script src="js/admin.js"></script>
 </body>
 </html>
+
 
