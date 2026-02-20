@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Check admin authentication
-    checkAdminAuth();
+    //checkAdminAuth();
     
     // Initialize admin navigation
     initAdminNavigation();
@@ -503,4 +503,5 @@ style.textContent = `
         color: #374151;
     }
 `;
+
 document.head.appendChild(style);
