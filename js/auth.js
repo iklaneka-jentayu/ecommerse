@@ -1,5 +1,5 @@
 // Authentication functions for GlobalMart
-
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwQqUDeeLe4GTCs50uCw5cxUGI1gBOJwQV_ul3mITMEJMVXecXH9-iu0ektZP2KohpbhQ/exec';
 document.addEventListener('DOMContentLoaded', function() {
     const registerForm = document.getElementById('registerForm');
     const loginForm = document.getElementById('loginForm');
@@ -552,4 +552,5 @@ function initUserDropdown() {
                 display: none;
                 position: absolute;
                 top: 100%;
+
                 right:
