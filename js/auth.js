@@ -434,13 +434,28 @@ async function saveFreightSettings(e) {
 }
 
 async function fetchDataFromSheet(sheetName) {
-    try {
+
+    fetch('${SHEET_URL}/getData?sheet=${sheetName}', {
+      method: 'GET', // Must be GET, POST, or HEAD
+      mode: 'no-cors' // Set the mode to no-cors
+    })
+    .then(response => {
+      // The response will be "opaque"
+      console.log(response); 
+      // You cannot read the response body, status, or headers from JavaScript
+      // trying to call response.json() or response.text() will result in an error
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+    
+   /* try {
         const response = await fetch(`${SHEET_URL}/getData?sheet=${sheetName}`);
         return await response.json();
     } catch (error) {
         console.error(`Error fetching ${sheetName}:`, error);
         return [];
-    }
+    }*/
 }
 
 function handleAdminLogout() {
@@ -507,5 +522,6 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
 
 
