@@ -191,8 +191,10 @@ function handleLogout(e) {
 // Google Sheets API functions
 async function saveUserToSheet(userData) {
     try {
+        console.log('url post',SHEET_URL + '/register');
         const response = await fetch(SHEET_URL + '/register', {
             method: 'POST',
+            mode: no-cors,
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -554,3 +556,4 @@ function initUserDropdown() {
                 top: 100%;
 
                 right:
+
