@@ -1,5 +1,5 @@
 // Admin Panel JavaScript for GlobalMart
-
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwQqUDeeLe4GTCs50uCw5cxUGI1gBOJwQV_ul3mITMEJMVXecXH9-iu0ektZP2KohpbhQ/exec';
 document.addEventListener('DOMContentLoaded', function() {
     // Check admin authentication
     checkAdminAuth();
@@ -292,6 +292,7 @@ async function deleteProduct(productId) {
     try {
         const response = await fetch(SHEET_URL + '/deleteProduct', {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -334,6 +335,7 @@ async function handleProductSubmit(e) {
         
         const response = await fetch(SHEET_URL + endpoint, {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -410,6 +412,7 @@ async function saveFreightSettings(e) {
     try {
         const response = await fetch(SHEET_URL + '/saveFreightSettings', {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -504,3 +507,4 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
