@@ -246,7 +246,7 @@ function calculateFreight() {
 }
 
 // Google Sheets Integration
-const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL'; // Replace with your web app URL
+//const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL'; // Replace with your web app URL
 
 async function logToSheet(action, message, userId = 'guest') {
     try {
@@ -287,4 +287,5 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
 
