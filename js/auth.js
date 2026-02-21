@@ -2,7 +2,7 @@
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwQqUDeeLe4GTCs50uCw5cxUGI1gBOJwQV_ul3mITMEJMVXecXH9-iu0ektZP2KohpbhQ/exec';
 document.addEventListener('DOMContentLoaded', function() {
     // Check admin authentication
-    checkAdminAuth();
+    //checkAdminAuth();
     
     // Initialize admin navigation
     initAdminNavigation();
@@ -507,4 +507,5 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
 
