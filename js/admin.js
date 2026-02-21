@@ -41,6 +41,8 @@ function initAdminNavigation() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             
+            //navLinks.forEach(l => l.classList.remove('active'));
+            
             // Remove active class from all links
             navLinks.forEach(l => l.classList.remove('active'));
             
@@ -49,6 +51,8 @@ function initAdminNavigation() {
             
             // Get target section id
             const targetId = this.getAttribute('href').substring(1);
+            console.log('targetId',targetId);
+            if(targetId=='')return;
             
             // Hide all sections
             sections.forEach(section => {
@@ -505,3 +509,4 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
