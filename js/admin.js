@@ -54,7 +54,8 @@ function initAdminNavigation() {
             console.log('targetId',targetId);
             if(targetId=='admin-shopee.html'){
                 console.log('return..');
-                setTimeout(function () { window.location = 'admin-shopee.html'; }, 3000);
+                window.location = 'admin-shopee.html';
+                //setTimeout(function () { window.location = 'admin-shopee.html'; }, 3000);
                 return;
             }
             
@@ -513,6 +514,7 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
 
 
 
