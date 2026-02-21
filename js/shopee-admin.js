@@ -1,5 +1,5 @@
 // Shopee Admin Panel JavaScript
-
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwQqUDeeLe4GTCs50uCw5cxUGI1gBOJwQV_ul3mITMEJMVXecXH9-iu0ektZP2KohpbhQ/exec';
 document.addEventListener('DOMContentLoaded', function() {
     initializeShopeeAdmin();
 });
@@ -399,7 +399,7 @@ async function importProducts(products, options) {
 
 async function saveProductToSheet(product) {
     try {
-        const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+        //const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
         
         const response = await fetch(SHEET_URL + '/saveShopeeProduct', {
             method: 'POST',
@@ -425,7 +425,7 @@ async function saveProductToSheet(product) {
 
 async function checkProductExists(shopeeId) {
     try {
-        const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+        //const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
         
         const response = await fetch(`${SHEET_URL}/checkShopeeProduct?shopee_id=${shopeeId}`);
         const result = await response.json();
@@ -440,7 +440,7 @@ async function checkProductExists(shopeeId) {
 
 async function loadImportedProducts() {
     try {
-        const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+        //const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
         
         const response = await fetch(`${SHEET_URL}/getShopeeProducts`);
         const products = await response.json();
@@ -505,7 +505,7 @@ function displayImportedProducts(products) {
 
 async function loadFilterCategories() {
     try {
-        const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+        //const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
         
         const response = await fetch(`${SHEET_URL}/getShopeeCategories`);
         const categories = await response.json();
@@ -526,7 +526,7 @@ async function loadFilterCategories() {
 
 async function loadSyncLogs() {
     try {
-        const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+        //const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
         
         const response = await fetch(`${SHEET_URL}/getShopeeSyncLogs`);
         const logs = await response.json();
@@ -568,7 +568,7 @@ async function loadSyncLogs() {
 
 async function addSyncLog(action, products, status, details) {
     try {
-        const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+        //const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
         
         const logData = {
             action: action,
@@ -671,7 +671,7 @@ async function deleteImportedProduct(id) {
     }
     
     try {
-        const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+        //const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
         
         await fetch(SHEET_URL + '/deleteShopeeProduct', {
             method: 'POST',
@@ -743,7 +743,7 @@ function showNotification(message, type = 'info') {
 
 async function logToSheet(action, message) {
     try {
-        const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+        //const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
         
         const logData = {
             action: action,
@@ -982,4 +982,5 @@ style.textContent = `
         color: #991b1b;
     }
 `;
+
 document.head.appendChild(style);
