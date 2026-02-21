@@ -1,4 +1,7 @@
 // Shopee API Configuration
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwQqUDeeLe4GTCs50uCw5cxUGI1gBOJwQV_ul3mITMEJMVXecXH9-iu0ektZP2KohpbhQ/exec';
+const YOUR_SHOP_ID='1234';
+
 const SHOPEE_CONFIG = {
     // API Endpoints
     API_BASE_URL: 'https://partner.shopeemobile.com/api/v2',
@@ -81,4 +84,5 @@ const SHOPEE_CONFIG = {
         '800002': 'automotive', // Motorcycle Parts
         '800003': 'automotive'  // Tools
     }
+
 };
