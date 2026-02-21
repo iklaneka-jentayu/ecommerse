@@ -52,7 +52,11 @@ function initAdminNavigation() {
             // Get target section id
             const targetId = this.getAttribute('href').substring(1);
             console.log('targetId',targetId);
-            if(targetId=='admin-shopee.html')return;
+            if(targetId=='admin-shopee.html'){
+                console.log('return..');
+                setTimeout(function () { window.location = 'admin-shopee.html'; }, 3000);
+                return;
+            }
             
             // Hide all sections
             sections.forEach(section => {
@@ -509,5 +513,6 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
 
 
