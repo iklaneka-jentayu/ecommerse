@@ -52,7 +52,7 @@ function initAdminNavigation() {
             // Get target section id
             const targetId = this.getAttribute('href').substring(1);
             console.log('targetId',targetId);
-            if(targetId=='')return;
+            if(targetId=='admin-shopee.html')return;
             
             // Hide all sections
             sections.forEach(section => {
@@ -509,4 +509,5 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
 
