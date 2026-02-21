@@ -435,7 +435,7 @@ async function saveFreightSettings(e) {
 
 async function fetchDataFromSheet(sheetName) {
     console.log('url: ',SHEET_URL);
-    console.log('url: ',sheetName);
+    console.log('sheetname: ',sheetName);
     console.log('fetch: ','${SHEET_URL}/getData?sheet=${sheetName}');
     fetch('${SHEET_URL}/getData?sheet=${sheetName}', {
       method: 'GET', // Must be GET, POST, or HEAD
@@ -524,6 +524,7 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
 
 
 
