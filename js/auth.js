@@ -434,7 +434,7 @@ async function saveFreightSettings(e) {
 }
 
 async function fetchDataFromSheet(sheetName) {
-
+    console.log('fetch: ','${SHEET_URL}/getData?sheet=${sheetName}');
     fetch('${SHEET_URL}/getData?sheet=${sheetName}', {
       method: 'GET', // Must be GET, POST, or HEAD
       mode: 'no-cors' // Set the mode to no-cors
@@ -522,6 +522,7 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
 
 
 
