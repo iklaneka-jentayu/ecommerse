@@ -1,5 +1,5 @@
 // Shopee API Integration Module
-
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwQqUDeeLe4GTCs50uCw5cxUGI1gBOJwQV_ul3mITMEJMVXecXH9-iu0ektZP2KohpbhQ/exec';
 class ShopeeAPI {
     constructor() {
         this.accessToken = null;
@@ -512,7 +512,7 @@ class ShopeeAPI {
     // Log to Google Sheets
     async logToSheet(action, message) {
         try {
-            const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+            //const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
             
             const logData = {
                 action: action,
@@ -538,4 +538,5 @@ class ShopeeAPI {
 }
 
 // Create global instance
+
 const shopeeAPI = new ShopeeAPI();
