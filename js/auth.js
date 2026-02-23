@@ -455,7 +455,9 @@ async function fetchDataFromSheet(sheetName) {
     // });
     
     try {
-        const response = await fetch(`${SHEET_URL}/getData?sheet=${sheetName}`);
+        const response = await fetch(`${SHEET_URL}/getData?sheet=${sheetName}`, {
+             mode: 'no-cors'
+        });
         return await response.json();
     } catch (error) {
         console.error(`Error fetching ${sheetName}:`, error);
