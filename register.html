@@ -3,82 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - GlobalMart</title>
+    <title>Register - GlobalMart | Create Your Shopping Account</title>
+    <meta name="description" content="Join GlobalMart today! Create your free account to enjoy exclusive deals, faster checkout, order tracking, and personalized shopping experience. Sign up in seconds.">
+    <meta name="keywords" content="GlobalMart registration, create account, sign up, online shopping Malaysia, ecommerce account, Toyib Pay">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="ms">Bahasa Malaysia</option>
+            <option value="zh">中文</option>
+        </select>
+    </div>
+
+    <!-- Register Container -->
     <div class="auth-container">
         <div class="auth-card">
-            <div class="language-selector-auth">
-                <select id="languageSelect">
-                    <option value="en">English</option>
-                    <option value="ms">Bahasa Malaysia</option>
-                    <option value="zh">中文</option>
-                </select>
+            <!-- Back to Home -->
+            <div class="back-to-home">
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-lang="en">Back to Home</span>
+                    <span data-lang="ms" style="display:none">Kembali ke Laman Utama</span>
+                    <span data-lang="zh" style="display:none">返回首页</span>
+                </a>
             </div>
-            
+
+            <!-- Register Header -->
             <div class="auth-header">
-                <h1 data-lang="en">Create Account</h1>
-                <h1 data-lang="ms" style="display:none">Buat Akaun</h1>
-                <h1 data-lang="zh" style="display:none">创建账户</h1>
-                <p data-lang="en">Join GlobalMart for exclusive deals and faster checkout</p>
-                <p data-lang="ms" style="display:none">Sertai GlobalMart untuk tawaran eksklusif dan pembayaran pantas</p>
-                <p data-lang="zh" style="display:none">加入 GlobalMart 享受独家优惠和快速结账</p>
+                <div class="auth-logo">
+                    <h1>GlobalMart</h1>
+                    <p class="tagline" data-lang="en">Your Global Shopping Partner</p>
+                    <p class="tagline" data-lang="ms" style="display:none">Rakan Membeli-belah Global Anda</p>
+                    <p class="tagline" data-lang="zh" style="display:none">您的全球购物伙伴</p>
+                </div>
+                
+                <h2 data-lang="en">Create Your Account</h2>
+                <h2 data-lang="ms" style="display:none">Buat Akaun Anda</h2>
+                <h2 data-lang="zh" style="display:none">创建您的账户</h2>
+                
+                <p data-lang="en">Join thousands of happy shoppers on GlobalMart</p>
+                <p data-lang="ms" style="display:none">Sertai beribu-ribu pembeli yang gembira di GlobalMart</p>
+                <p data-lang="zh" style="display:none">加入全球数千名快乐购物者的行列</p>
             </div>
             
+            <!-- Registration Form -->
             <form id="registerForm" class="auth-form">
                 <div class="form-group">
-                    <label data-lang="en">Full Name</label>
-                    <label data-lang="ms" style="display:none">Nama Penuh</label>
-                    <label data-lang="zh" style="display:none">全名</label>
-                    <input type="text" id="fullName" required>
+                    <label for="fullName" data-lang="en">Full Name</label>
+                    <label for="fullName" data-lang="ms" style="display:none">Nama Penuh</label>
+                    <label for="fullName" data-lang="zh" style="display:none">全名</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="fullName" placeholder="John Doe" required>
+                    </div>
                 </div>
                 
                 <div class="form-group">
-                    <label data-lang="en">Email Address</label>
-                    <label data-lang="ms" style="display:none">Alamat Emel</label>
-                    <label data-lang="zh" style="display:none">电子邮件地址</label>
-                    <input type="email" id="email" required>
+                    <label for="email" data-lang="en">Email Address</label>
+                    <label for="email" data-lang="ms" style="display:none">Alamat Emel</label>
+                    <label for="email" data-lang="zh" style="display:none">电子邮件地址</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="you@example.com" required>
+                    </div>
                 </div>
                 
                 <div class="form-group">
-                    <label data-lang="en">Phone Number</label>
-                    <label data-lang="ms" style="display:none">Nombor Telefon</label>
-                    <label data-lang="zh" style="display:none">电话号码</label>
-                    <input type="tel" id="phone" required>
+                    <label for="phone" data-lang="en">Phone Number</label>
+                    <label for="phone" data-lang="ms" style="display:none">Nombor Telefon</label>
+                    <label for="phone" data-lang="zh" style="display:none">电话号码</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" placeholder="+6012-345 6789" required>
+                    </div>
                 </div>
                 
                 <div class="form-group">
-                    <label data-lang="en">Password</label>
-                    <label data-lang="ms" style="display:none">Kata Laluan</label>
-                    <label data-lang="zh" style="display:none">密码</label>
-                    <input type="password" id="password" required>
+                    <label for="password" data-lang="en">Password</label>
+                    <label for="password" data-lang="ms" style="display:none">Kata Laluan</label>
+                    <label for="password" data-lang="zh" style="display:none">密码</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <small class="password-hint" data-lang="en">Must be at least 6 characters</small>
+                    <small class="password-hint" data-lang="ms" style="display:none">Mesti sekurang-kurangnya 6 aksara</small>
+                    <small class="password-hint" data-lang="zh" style="display:none">必须至少6个字符</small>
                 </div>
                 
                 <div class="form-group">
-                    <label data-lang="en">Confirm Password</label>
-                    <label data-lang="ms" style="display:none">Sahkan Kata Laluan</label>
-                    <label data-lang="zh" style="display:none">确认密码</label>
-                    <input type="password" id="confirmPassword" required>
+                    <label for="confirmPassword" data-lang="en">Confirm Password</label>
+                    <label for="confirmPassword" data-lang="ms" style="display:none">Sahkan Kata Laluan</label>
+                    <label for="confirmPassword" data-lang="zh" style="display:none">确认密码</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" placeholder="••••••••" required>
+                    </div>
                 </div>
                 
+                <!-- Terms and Conditions -->
                 <div class="form-group">
-                    <label>
-                        <input type="checkbox" required>
-                        <span data-lang="en">I agree to the Terms & Conditions</span>
-                        <span data-lang="ms" style="display:none">Saya bersetuju dengan Terma & Syarat</span>
-                        <span data-lang="zh" style="display:none">我同意条款和条件</span>
-                    </label>
+                    <div class="terms-agreement">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">
+                            <span data-lang="en">I agree to the <a href="#" target="_blank">Terms & Conditions</a> and <a href="#" target="_blank">Privacy Policy</a></span>
+                            <span data-lang="ms" style="display:none">Saya bersetuju dengan <a href="#" target="_blank">Terma & Syarat</a> dan <a href="#" target="_blank">Dasar Privasi</a></span>
+                            <span data-lang="zh" style="display:none">我同意 <a href="#" target="_blank">条款和条件</a> 和 <a href="#" target="_blank">隐私政策</a></span>
+                        </label>
+                    </div>
                 </div>
                 
-                <button type="submit" class="btn btn-primary btn-block">
-                    <span data-lang="en">Register</span>
-                    <span data-lang="ms" style="display:none">Daftar</span>
-                    <span data-lang="zh" style="display:none">注册</span>
+                <!-- Marketing Consent -->
+                <div class="form-group">
+                    <div class="marketing-consent">
+                        <input type="checkbox" id="marketing" checked>
+                        <label for="marketing">
+                            <span data-lang="en">Send me exclusive offers and shopping tips</span>
+                            <span data-lang="ms" style="display:none">Hantar saya tawaran eksklusif dan tip membeli-belah</span>
+                            <span data-lang="zh" style="display:none">发送独家优惠和购物提示给我</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block" id="registerBtn">
+                    <span data-lang="en">Create Account</span>
+                    <span data-lang="ms" style="display:none">Buat Akaun</span>
+                    <span data-lang="zh" style="display:none">创建账户</span>
+                    <span class="spinner" id="registerSpinner" style="display: none;">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </span>
                 </button>
                 
+                <!-- Login Link -->
                 <div class="auth-footer">
                     <p data-lang="en">Already have an account?</p>
                     <p data-lang="ms" style="display:none">Sudah mempunyai akaun?</p>
@@ -90,8 +155,31 @@
             </form>
         </div>
     </div>
+
+    <!-- Registration Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 data-lang="en">Registration Successful!</h2>
+            <h2 data-lang="ms" style="display:none">Pendaftaran Berjaya!</h2>
+            <h2 data-lang="zh" style="display:none">注册成功！</h2>
+            
+            <p data-lang="en">Your account has been created successfully. You will be redirected to the homepage shortly.</p>
+            <p data-lang="ms" style="display:none">Akaun anda telah berjaya dicipta. Anda akan diarahkan ke laman utama sebentar lagi.</p>
+            <p data-lang="zh" style="display:none">您的账户已成功创建。您将很快被重定向到首页。</p>
+            
+            <button id="continueShopping" class="btn btn-primary">
+                <span data-lang="en">Continue Shopping</span>
+                <span data-lang="ms" style="display:none">Teruskan Membeli-belah</span>
+                <span data-lang="zh" style="display:none">继续购物</span>
+            </button>
+        </div>
+    </div>
     
     <script src="js/language.js"></script>
     <script src="js/auth.js"></script>
+    <script src="js/register.js"></script>
 </body>
 </html>
