@@ -439,7 +439,7 @@ async function fetchDataFromSheet(sheetName) {
     console.log('url: ',SHEET_URL);
     console.log('sheetname: ',sheetName);
     //const url = SHEET_URL+'/getData?sheet='+sheetName;
-    //console.log('fetch: ',SHEET_URL+'/getData?sheet='+sheetName);
+    //console.log('fetch: ','${SHEET_URL}/getData?sheet=${sheetName}');
     // fetch(url, {
     //   method: 'GET', // Must be GET, POST, or HEAD
     //   mode: 'no-cors' // Set the mode to no-cors
@@ -454,7 +454,7 @@ async function fetchDataFromSheet(sheetName) {
     //   console.error('There was a problem with the fetch operation:', error);
     // });
 
-    console.log(`${SHEET_URL}/getData?sheet=${sheetName}`);
+    console.log('fetch=',`${SHEET_URL}/getData?sheet=${sheetName}`);
     
     try {
         const response = await fetch(`${SHEET_URL}/getData?sheet=${sheetName}`, {
