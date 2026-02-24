@@ -2,7 +2,7 @@
 
 // Configuration
 const CONFIG = {
-    SHEET_URL: 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL',
+    SHEET_URL: 'https://script.google.com/macros/s/AKfycbwQqUDeeLe4GTCs50uCw5cxUGI1gBOJwQV_ul3mITMEJMVXecXH9-iu0ektZP2KohpbhQ/exec',
     CURRENCY: 'RM',
     TAX_RATE: 0.06,
     FREE_SHIPPING_THRESHOLD: 100,

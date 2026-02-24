@@ -2,7 +2,7 @@
 
 // Configuration
 const AUTH_CONFIG = {
-    SHEET_URL: 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL',
+    SHEET_URL: 'https://script.google.com/macros/s/AKfycbwQqUDeeLe4GTCs50uCw5cxUGI1gBOJwQV_ul3mITMEJMVXecXH9-iu0ektZP2KohpbhQ/exec',
     SESSION_TIMEOUT: 30 * 60 * 1000, // 30 minutes
     MIN_PASSWORD_LENGTH: 6,
     PASSWORD_REGEX: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/
