@@ -110,7 +110,7 @@ function initRegisterForm(form) {
         if (!validateRegistrationForm()) {
             return;
         }
-        
+        console.log('addeventlistener submit');
         await handleRegistration({
             fullName: fullNameInput.value.trim(),
             email: emailInput.value.trim(),
@@ -632,6 +632,7 @@ async function registerUser(userData) {
             lastLogin: null
         };
         
+        console.log('registerUser',JSON.stringify(userData));
         // Save to local storage (for demo)
         const users = JSON.parse(localStorage.getItem('users') || '[]');
         users.push(userToRegister);
@@ -640,6 +641,7 @@ async function registerUser(userData) {
         // Save to Google Sheets
         const response = await fetch(`${AUTH_CONFIG.SHEET_URL}/register`, {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             },
