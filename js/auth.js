@@ -570,6 +570,7 @@ async function authenticateUser(credentials) {
         if (user) {
             return user;
         }
+        console.log('login-',JSON.stringify(credentials));
         
         // Fallback to Google Sheets
         const response = await fetch(`${AUTH_CONFIG.SHEET_URL}/authenticate`, {
@@ -642,7 +643,7 @@ async function registerUser(userData) {
         // Save to Google Sheets
         const response = await fetch(`${AUTH_CONFIG.SHEET_URL}/register`, {
             method: 'POST',
-            mode: 'no-cors',
+            //mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             },
