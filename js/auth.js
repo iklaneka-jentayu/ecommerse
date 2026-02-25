@@ -1,5 +1,5 @@
 // Authentication Module for GlobalMart
-
+//https://script.google.com/macros/s/AKfycbwQqUDeeLe4GTCs50uCw5cxUGI1gBOJwQV_ul3mITMEJMVXecXH9-iu0ektZP2KohpbhQ/exec
 // Configuration
 const AUTH_CONFIG = {
     SHEET_URL: 'https://script.google.com/macros/s/AKfycbwQqUDeeLe4GTCs50uCw5cxUGI1gBOJwQV_ul3mITMEJMVXecXH9-iu0ektZP2KohpbhQ/exec',
@@ -574,6 +574,7 @@ async function authenticateUser(credentials) {
         // Fallback to Google Sheets
         const response = await fetch(`${AUTH_CONFIG.SHEET_URL}/authenticate`, {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -647,6 +648,8 @@ async function registerUser(userData) {
             },
             body: JSON.stringify(userToRegister)
         });
+
+        console.log('Register response:', JSON.stringify(response));
         
         if (response.ok) {
             const result = await response.json();
