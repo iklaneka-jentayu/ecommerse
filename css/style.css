@@ -296,10 +296,10 @@ a:hover {
 
 /* Language Selector */
 .language-selector {
-    position: fixed;
-    top: 20px;
+    position: static;
+    /*top: 20px;
     right: 20px;
-    z-index: 1001;
+    z-index: 1001;*/
 }
 
 .language-selector select {
