@@ -296,7 +296,8 @@ a:hover {
 
 /* Language Selector */
 .language-selector {
-    position: static;
+    position: relative;
+    left: 10px;
     /*top: 20px;
     right: 20px;
     z-index: 1001;*/
