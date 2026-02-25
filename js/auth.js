@@ -603,7 +603,7 @@ async function checkUserExists(email) {
         }
         
         // Check Google Sheets
-        const response = await fetch(`${AUTH_CONFIG.SHEET_URL}/checkUser?email=${encodeURIComponent(email)}`);
+        const response = await fetch(`${AUTH_CONFIG.SHEET_URL}/checkUser?email=${encodeURIComponent(email)}`,{mode:'no-cors'});
         if (response.ok) {
             const result = await response.json();
             return result.exists;
@@ -643,7 +643,7 @@ async function registerUser(userData) {
         // Save to Google Sheets
         const response = await fetch(`${AUTH_CONFIG.SHEET_URL}/register`, {
             method: 'POST',
-            //mode: 'no-cors',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -860,6 +860,7 @@ async function logToSheet(action, message, userId = 'guest') {
         
         const response = await fetch(AUTH_CONFIG.SHEET_URL + '/log', {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             },
